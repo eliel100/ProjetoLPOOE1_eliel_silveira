@@ -1,12 +1,13 @@
 
 package com.mycompany.projetolpooe1_elielsilveira.model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "tb_produto")
-public class Produto {
+public class Produto implements Serializable{
 
     public Long getId() {
         return id;

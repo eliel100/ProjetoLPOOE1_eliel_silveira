@@ -12,11 +12,11 @@ import javax.persistence.Persistence;
  */
 public class PersistenciaJPA implements InterfacePersistencia{
 
-    EntityManager entity;
-    EntityManagerFactory factory;
+    public EntityManagerFactory factory;
+    public EntityManager entity;
 
     public PersistenciaJPA() {
-        factory = Persistence.createEntityManagerFactory("ProjetoLPOOE1_elielsilveira");
+        factory = Persistence.createEntityManagerFactory("pu_ProjetoLPOOE1_elielsilveira");
         entity = factory.createEntityManager();
     }
     
@@ -34,13 +34,5 @@ public class PersistenciaJPA implements InterfacePersistencia{
     }
 
    
-
-    @Override
-    public void persist(Object o) throws Exception {
-        entity.getTransaction().begin();
-        entity.persist(o);
-        entity.getTransaction().commit();
-    }
-
     
 }

@@ -12,7 +12,6 @@ package com.mycompany.projetolpooe1_elielsilveira.model.dao;
     public interface InterfacePersistencia {
     public Boolean conexaoAberta();
     public void fecharConexao();
-    public void persist(Object o) throws Exception;
    
 }
 

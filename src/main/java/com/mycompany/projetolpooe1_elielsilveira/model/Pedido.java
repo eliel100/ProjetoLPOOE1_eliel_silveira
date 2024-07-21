@@ -5,13 +5,14 @@ package com.mycompany.projetolpooe1_elielsilveira.model;
  *
  * @author telmo
  */
+import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "tb_pedido")
-public class Pedido {
+public class Pedido implements Serializable{
 
     public Long getId() {
         return id;
