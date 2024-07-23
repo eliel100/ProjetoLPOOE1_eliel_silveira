@@ -21,13 +21,13 @@ public class TestPersistenciaJDBC {
        
     }
     
-    //@Test
+    @Test
     public void testPersistenciaConexao() throws Exception {
         
         //criar um objeto do tipo PersistenciaJDBC.
         PersistenciaJDBC jdbc = new PersistenciaJDBC();
         if(jdbc.conexaoAberta()){
-            System.out.println("conectou no BD via jpa ...");
+            System.out.println("conectou no BD via jdbc ...");
             jdbc.fecharConexao();
         }else{
             System.out.println("nao conectou no BD ...");

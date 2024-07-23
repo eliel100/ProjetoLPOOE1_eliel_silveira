@@ -33,6 +33,26 @@ public class PersistenciaJPA implements InterfacePersistencia{
         entity.close();
     }
 
+    
+    @Override
+    public Object find(Class c, Object id) throws Exception {
+        return entity.find(c, id);
+    }
+
+    @Override
+    public void persist(Object o) throws Exception {
+        entity.getTransaction().begin();
+        entity.persist(o);
+        entity.getTransaction().commit();
+    }
+
+    @Override
+    public void remover(Object o) throws Exception {
+        entity.getTransaction().begin();
+        entity.remove(o);
+        entity.getTransaction().commit();
+    }
+      
    
     
 }
